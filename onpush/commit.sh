@@ -15,7 +15,7 @@ trap restore EXIT
 resbranch=result.$BRANCH.$COMMIT.$HOSTNAME
 
 git checkout -b $resbranch
-git add results/$system/$HOSTNAME
+git add $ONPUSH_DIR/results/$system/$HOSTNAME
 git commit -m `date '+%d%b%y'` .
 
 git push -u $origin $resbranch
