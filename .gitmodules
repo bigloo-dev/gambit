@@ -1,0 +1,3 @@
+[submodule "autobench"]
+	path = autobench
+	url = inria:GIT/autobench.git
