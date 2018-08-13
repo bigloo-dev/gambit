@@ -9,7 +9,7 @@ NBITER=3
 BRANCH=$1
 
 
-. ./$ONPUSH_DIR/CONFIG.sh
+. $ONPUSH_DIR/CONFIG.sh
 
 for h in $HOSTS; do 
   if [ "$h " = "$HOST " ]; then
