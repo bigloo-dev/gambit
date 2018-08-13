@@ -19,4 +19,3 @@ git add results/$system/$HOSTNAME
 git commit -m `date '+%d%b%y'` .
 
 git push -u $origin $resbranch
-
