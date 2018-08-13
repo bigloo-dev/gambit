@@ -20,8 +20,8 @@ for h in $HOSTS; do
         echo "system $s"
         set -a
         source $ONPUSH_DIR/install.sh $s || exit 1
-        source $ONPUSH_DIR/prepare.sh $s
 	for b in $BENCHMARKS; do
+          source $ONPUSH_DIR/prepare.sh $s $b
           source $ONPUSH_DIR/measure.sh $s $b
 	done
         source $ONPUSH_DIR/commit.sh $s
