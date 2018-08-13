@@ -9,7 +9,7 @@ NBITER=3
 BRANCH=$1
 
 
-. ./$ONPUSHDIR/CONFIG.sh
+. ./$ONPUSH_DIR/CONFIG.sh
 
 for h in $HOSTS; do 
   if [ "$h " = "$HOST " ]; then
@@ -18,13 +18,13 @@ for h in $HOSTS; do
     for s in $SYSTEMS; do
       if [ -d $s ]; then
         set -a
-        source ./$ONPUSHDIR/install.sh $s && exit 1
-        source ./$ONPUSHDIR/prepare.sh $s
+        source ./$ONPUSH_DIR/install.sh $s && exit 1
+        source ./$ONPUSH_DIR/prepare.sh $s
 	for b in $BENCHMARKS; do
-          source ./$ONPUSHDIR/measure.sh $s $b
+          source ./$ONPUSH_DIR/measure.sh $s $b
 	done
-        source ./$ONPUSHDIR/commit.sh $s
-        source ./$ONPUSHDIR/cleanup.sh $s
+        source ./$ONPUSH_DIR/commit.sh $s
+        source ./$ONPUSH_DIR/cleanup.sh $s
         set +a
       fi
     done
