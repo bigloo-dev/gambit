@@ -4929,33 +4929,33 @@
 #else
 #define ___VERSION 408009
 #define ___LINKFILE_NAME "_gambit"
-#define ___LINKER_ID ____20___gambit
+#define ___LINKER_ID ___LNK___gambit
 #define ___FLAT_LINKFILE
 #define ___SCRIPT_LINE 0
 #include "gambit.h"
 
 ___BEGIN_NEW_LNK
-___DEF_NEW_LNK(____20___kernel)
-___DEF_NEW_LNK(____20___system)
-___DEF_NEW_LNK(____20___num)
-___DEF_NEW_LNK(____20___std)
-___DEF_NEW_LNK(____20___eval)
-___DEF_NEW_LNK(____20___io)
-___DEF_NEW_LNK(____20___nonstd)
-___DEF_NEW_LNK(____20___thread)
-___DEF_NEW_LNK(____20___repl)
+___DEF_NEW_LNK(___LNK___kernel)
+___DEF_NEW_LNK(___LNK___system)
+___DEF_NEW_LNK(___LNK___num)
+___DEF_NEW_LNK(___LNK___std)
+___DEF_NEW_LNK(___LNK___eval)
+___DEF_NEW_LNK(___LNK___io)
+___DEF_NEW_LNK(___LNK___nonstd)
+___DEF_NEW_LNK(___LNK___thread)
+___DEF_NEW_LNK(___LNK___repl)
 ___END_NEW_LNK
 
 ___BEGIN_LNK
- ___DEF_LNK(____20___kernel)
-,___DEF_LNK(____20___system)
-,___DEF_LNK(____20___num)
-,___DEF_LNK(____20___std)
-,___DEF_LNK(____20___eval)
-,___DEF_LNK(____20___io)
-,___DEF_LNK(____20___nonstd)
-,___DEF_LNK(____20___thread)
-,___DEF_LNK(____20___repl)
+ ___DEF_LNK(___LNK___kernel)
+,___DEF_LNK(___LNK___system)
+,___DEF_LNK(___LNK___num)
+,___DEF_LNK(___LNK___std)
+,___DEF_LNK(___LNK___eval)
+,___DEF_LNK(___LNK___io)
+,___DEF_LNK(___LNK___nonstd)
+,___DEF_LNK(___LNK___thread)
+,___DEF_LNK(___LNK___repl)
 ___END_LNK
 
 ___BEGIN_NEW_KEY
