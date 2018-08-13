@@ -17,9 +17,9 @@ for h in $HOSTS; do
   
     for s in $SYSTEMS; do
       if [ -d $ONPUSH_DIR/$s ]; then
-        echo "system= $s"
+        echo "system $s"
         set -a
-        source $ONPUSH_DIR/install.sh $s && exit 1
+        source $ONPUSH_DIR/install.sh $s || exit 1
         source $ONPUSH_DIR/prepare.sh $s
 	for b in $BENCHMARKS; do
           source $ONPUSH_DIR/measure.sh $s $b
@@ -27,7 +27,7 @@ for h in $HOSTS; do
         source $ONPUSH_DIR/commit.sh $s
         source $ONPUSH_DIR/cleanup.sh $s
         set +a
-        echo "system= $s...done"
+        echo "system $s...done"
       fi
     done
   fi  

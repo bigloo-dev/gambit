@@ -14,7 +14,7 @@ export TIMEFORMAT
 
 for ((i=0; i<$NBITER; i++)) do
   tm=`time $TMP/$benchmark  2>&1 > /dev/null`
-  cy=`lib/perfcycles $TMP/$benchmark 2>&1`
+  cy=`$ONPUSH_DIR/lib/perfcycles $TMP/$benchmark 2>&1`
 
   times="$times$sep $tm"
   cycles="$cycles$sep $cy"
