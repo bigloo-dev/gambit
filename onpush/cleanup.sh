@@ -1,5 +1,6 @@
 #!/bin/bash
 
-$1/cleanup.sh
+source $ONPUSH_DIR/$1/cleanup.sh
+
 
 rm -rf $TMP
