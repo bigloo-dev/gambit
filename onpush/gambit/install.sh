@@ -13,5 +13,3 @@ else
   make -j && make install
   make deselect-gen-for-commit
 fi
-
-
