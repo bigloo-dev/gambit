@@ -19,4 +19,4 @@ git checkout -b $resbranch
 git add $ONPUSH_DIR/results/$system/$HOSTNAME
 git commit -m `date '+%d%b%y'` .
 
-git push -u $origin $resbranch 
+git push -u $origin $resbranch
