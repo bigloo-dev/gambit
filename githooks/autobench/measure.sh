@@ -3,6 +3,8 @@
 system=$1
 benchmark=$2
 
+[ -z "$PERF" ] && PERF=perf
+
 mkdir -p $GITHOOKS_DIR/autobench/results/$system/$HOSTNAME
 
 times=
@@ -13,8 +15,9 @@ sep="["
 #* export TIMEFORMAT                                                   */
 
 for ((i=0; i<$AUTOBENCH_ITER; i++)) do
-  tm=`/usr/bin/time -f '%e' $TMP/$benchmark 2>&1 > /dev/null`
-  cy=`$GITHOOKS_DIR/autobench/perfcycles.sh $TMP/$benchmark 2>&1`
+  p=`$PERF stat $TMP/$benchmark 2>&1 > /dev/null`
+  cy=`echo $p | grep "   cycles  " | awk '{print $1}' | sed 's/,//g'`
+  tm=`echo $p | grep " seconds time elapsed" | awk '{print $1}'`
 
   times="$times$sep $tm"
   cycles="$cycles$sep $cy"
