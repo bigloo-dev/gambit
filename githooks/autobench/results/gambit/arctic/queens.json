@@ -1,0 +1,7 @@
+{ times: [ /usr/bin/time: cannot run /home/feeley/githooks-daemon/repos/git@github.com/bigloo-dev/gambit/githooks/tmp/queens: No such file or directory
+Command exited with non-zero status 127
+0.00, /usr/bin/time: cannot run /home/feeley/githooks-daemon/repos/git@github.com/bigloo-dev/gambit/githooks/tmp/queens: No such file or directory
+Command exited with non-zero status 127
+0.00, /usr/bin/time: cannot run /home/feeley/githooks-daemon/repos/git@github.com/bigloo-dev/gambit/githooks/tmp/queens: No such file or directory
+Command exited with non-zero status 127
+0.00 ], cycles: [ , ,  ] }
