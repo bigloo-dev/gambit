@@ -8,7 +8,6 @@ BRANCH=`echo -n $BRANCH | sed 's|refs/heads/||'`
 
 function restore() {
   git checkout $BRANCH
-  make deselect-gen-for-commit
 }
 
 trap restore EXIT
@@ -16,6 +15,7 @@ trap restore EXIT
 resbranch=result.$BRANCH.$COMMIT.$HOSTNAME
 
 git checkout -b $resbranch
+make deselect-gen-for-commit
 git add $ONPUSH_DIR/results/$system/$HOSTNAME
 git commit -m `date '+%d%b%y'` .
 
