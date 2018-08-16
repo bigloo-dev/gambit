@@ -1,3 +1,3 @@
 HOSTS="arctic redrock.inria.fr" 
 SYSTEMS="gambit"
-BENCHMARKS="fib tak nqueens"
+BENCHMARKS="fib tak queens"
