@@ -7,7 +7,8 @@ origin=`git remote -v | grep "(push)" | awk '{print $1}'`
 BRANCH=`echo -n $BRANCH | sed 's|refs/heads/||'`
 
 function restore() {
-  git checkout $BRANCH  
+  git checkout $BRANCH
+  make deselect-gen-for-commit
 }
 
 trap restore EXIT
