@@ -8,7 +8,7 @@ BRANCH=`echo -n $BRANCH | sed 's|refs/heads/||'`
 
 function restore() {
   git checkout $BRANCH
-  make deselect-gen-for-commit
+  #make deselect-gen-for-commit
 }
 
 trap restore EXIT
