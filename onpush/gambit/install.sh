@@ -6,7 +6,7 @@ if [ ! -z "`git diff HEAD HEAD^ ./configure`" -o ! -f config.log -o ! -d $ONPUSH
   echo "configuring gambit..."
   ./configure --enable-single-host --prefix=$ONPUSH_DIR/local || exit 1
   echo "compiling and testing gambit... "
-  make -j && make check && make install
+  make -j && make check && make install 
 else  
   echo "compiling gambit... "
   make -j && make install
