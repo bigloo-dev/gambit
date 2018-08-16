@@ -1,3 +1,3 @@
-HOSTS="arctic redrock.inria.fr"
+HOSTS="arctic redrock.inria.fr" 
 SYSTEMS="gambit"
 BENCHMARKS=fib
