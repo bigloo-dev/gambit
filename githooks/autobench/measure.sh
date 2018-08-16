@@ -15,9 +15,9 @@ sep="["
 #* export TIMEFORMAT                                                   */
 
 for ((i=0; i<$AUTOBENCH_ITER; i++)) do
-  p=`$PERF stat $TMP/$benchmark 2>&1 > /dev/null`
-  cy=`echo $p | grep "   cycles  " | awk '{print $1}' | sed 's/,//g'`
-  tm=`echo $p | grep " seconds time elapsed" | awk '{print $1}'`
+  p=`$PERF stat $TMP/$benchmark 2> $TMP/perf.run > /dev/null`
+  cy=`grep "   cycles  " $TMP/perf.run | awk '{print $1}' | sed 's/,//g'`
+  tm=`grep " seconds time elapsed" $TMP/perf.run | awk '{print $1}'`
 
   times="$times$sep $tm"
   cycles="$cycles$sep $cy"
