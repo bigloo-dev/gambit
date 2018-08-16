@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mkdir -p $TMP
+mkdir -p $TMP 
 source $ONPUSH_DIR/$1/prepare.sh
