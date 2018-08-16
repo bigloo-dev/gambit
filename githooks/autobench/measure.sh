@@ -22,6 +22,7 @@ for ((i=0; i<$AUTOBENCH_ITER; i++)) do
   sep=","
 done
 
+echo "$2:"
 echo "{ times: $times ], cycles: $cycles ] }" \
   | tee $GITHOOKS_DIR/autobench/results/$system/$HOSTNAME/$benchmark.json
 
